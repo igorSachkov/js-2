@@ -1,0 +1,142 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto Light", sans-serif;
+}
+
+.wrapper {
+    width: 1130px;
+    margin: 0 auto;
+}
+
+.task {
+    background-color: #f9f9fa;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    box-shadow: 1px 1px 6px rgba(128, 128, 128, 0.2);
+}
+
+.list__item {
+    list-style: none;
+    display: inline-block;
+}
+
+.list__link {
+    text-decoration: none;
+    color: #1a1919;
+    font-size: 1.2em;
+    padding: .5rem 1rem;
+    display: block;
+    width: max-content;
+    margin: .5rem;
+    border: 1px solid #1a1919;
+    background-color: #fcf9f9;
+    border-radius: .2rem;
+    transition: background-color, border .2s ease-in-out;
+}
+
+.list__link:hover {
+    border: 1px solid bisque;
+    transition: background-color, border .2s ease-in-out;
+}
+
+.active {
+    background-color: bisque;
+}
+
+.task2 .list__item {
+    margin: .5rem;
+    border: 1px solid #1a1919;
+    background-color: #fcf9f9;
+    border-radius: .2rem;
+    transition: .2s ease-in-out;
+    font-size: 1.2em;
+    padding: .5rem 1rem;
+    color: #1a1919;
+    position: relative;
+}
+
+.task2 .list {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.control-panel {
+    text-align: center;
+}
+
+.btn {
+    padding: .5rem 1rem;
+    font-size: 1.3em;
+    margin: .5rem;
+    cursor: pointer;
+    transition: opacity .3s ease-in-out;
+    opacity: 1;
+}
+
+.delete-edit::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #989898;
+    background: #fff;
+}
+
+.edit-mode .delete-edit {
+    cursor: pointer;
+}
+
+.edit-mode .delete::before {
+    content: "x";
+    text-align: center;
+    line-height: 1rem;
+    color: red;
+}
+
+.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.task3 .list {
+    border: 1px solid grey;
+    display: flex;
+    justify-content: space-between;
+}
+
+.task3 .list__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: grey;
+    width: 200px;
+    height: 200px;
+    border: 1px solid grey;
+    margin: 1rem;
+    position: relative;
+}
+
+.task3 .list__item-hovered {
+    background: white;
+    border-style: dashed;
+}
+
+.drag-n-drop-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: bisque;
+    cursor: pointer;
+    font-size: 1.2rem;
+    text-align: center;
+    color: #1a1919;
+    font-weight: 500;
+}
